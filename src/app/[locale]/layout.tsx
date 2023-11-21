@@ -1,9 +1,9 @@
+import Header from '@/components/Header';
 import useTextDirection from '@/hooks/useTextDirection';
 import { Locale, locales } from '@i18nconfig';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import '../globals.css';
-import Header from './_components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
