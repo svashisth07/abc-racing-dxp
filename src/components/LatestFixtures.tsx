@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const fixtures = [
   {
     id: 1,
@@ -22,9 +24,11 @@ const LatestFixture = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {fixtures.map((fixture) => (
           <div key={fixture.id} className="bg-gray-200 p-4 rounded-md shadow">
-            <img
+            <Image
               src={fixture.image}
               alt={fixture.name}
+              width={100}
+              height={100}
               className="w-full h-auto"
             />
             <h3 className="text-lg font-bold mt-2">{fixture.name}</h3>
