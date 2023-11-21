@@ -1,8 +1,7 @@
 import useTextDirection from '@/hooks/useTextDirection';
-import { locales } from '@i18nconfig';
-import { getTranslations } from 'next-intl/server';
+import { Locale, locales } from '@i18nconfig';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
-import Head from 'next/head';
 import '../globals.css';
 import Header from './_components/Header';
 
@@ -26,18 +25,18 @@ export function generateStaticParams() {
 
 export default function RootLayout({
   children,
-  params,
+  params: { locale },
 }: {
   children: React.ReactNode;
   params: { locale: Locale };
 }) {
+  // Ensures static rendering at build time.
+  unstable_setRequestLocale(locale);
+
   const dir = useTextDirection();
   return (
-    <html lang={params.locale} dir={dir}>
-      <Head>
-        <link rel="prefetch" href="/hero.avif" />
-      </Head>
-      <body className={inter.className}>
+    <html lang={locale} dir={dir}>
+      <body className={`${inter.className} relative`}>
         <Header />
         {children}
       </body>
