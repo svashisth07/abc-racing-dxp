@@ -1,0 +1,12 @@
+{
+  "Index": {
+    "Metadata": {
+      "title": "دِرخَة - أخبار بيئية إيجابية",
+      "description": "تم إنشاؤه باستخدام Next.js و next-intl"
+    },
+    "Header": {
+      "title": "دِرخَة",
+      "subtitle": "أخبار بيئية إيجابية"
+    }
+  }
+}

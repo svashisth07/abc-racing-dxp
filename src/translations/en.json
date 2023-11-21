@@ -1,0 +1,12 @@
+{
+  "Index": {
+    "Metadata": {
+      "title": "Dirkha - Good Green News",
+      "description": "Built with Next.js and next-intl"
+    },
+    "Header": {
+      "title": "Dirkha",
+      "subtitle": "Good Green News"
+    }
+  }
+}
