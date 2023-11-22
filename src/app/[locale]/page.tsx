@@ -5,7 +5,7 @@ import { pageQuery } from '@/lib/queries';
 import { PageQueryResponse } from '@/types/query';
 import { parsePageData } from '@/utils/parsePageData';
 import { Locale } from '@i18nconfig';
-// import { unstable_setRequestLocale } from 'next-intl/server';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { cache } from 'react';
 
 export const revalidate = 3600; // revalidate the data at most every hour
@@ -33,7 +33,7 @@ export default async function Home({
 }) {
   const { page } = await getPageData(locale);
   // Ensures static rendering at build time.
-  // unstable_setRequestLocale(locale);
+  unstable_setRequestLocale(locale);
 
   const { title, subTitle, hero, ...rest } = page;
   return (
