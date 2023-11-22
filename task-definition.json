@@ -1,9 +1,9 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:eu-north-1:272717768067:task-definition/abc-dxp-task-defination:1",
+  "taskDefinitionArn": "arn:aws:ecs:eu-north-1:272717768067:task-definition/abc-dxp-task-defination:3",
   "containerDefinitions": [
     {
       "name": "abc-dxp-container",
-      "image": "272717768067.dkr.ecr.eu-north-1.amazonaws.com/abc-racing-dxp:latest",
+      "image": "272717768067.dkr.ecr.eu-north-1.amazonaws.com/abc-racing-dxp:aef1a4d4a929084d284d9d392afb63a30ee414f7",
       "cpu": 0,
       "portMappings": [
         {
@@ -16,10 +16,8 @@
       ],
       "essential": true,
       "environment": [],
-      "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
-      "ulimits": [],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -27,15 +25,14 @@
           "awslogs-group": "/ecs/",
           "awslogs-region": "eu-north-1",
           "awslogs-stream-prefix": "ecs"
-        },
-        "secretOptions": []
+        }
       }
     }
   ],
   "family": "abc-dxp-task-defination",
   "executionRoleArn": "arn:aws:iam::272717768067:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 1,
+  "revision": 3,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -73,7 +70,7 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2023-11-21T19:52:02.797Z",
-  "registeredBy": "arn:aws:iam::272717768067:root",
+  "registeredAt": "2023-11-22T06:52:58.791Z",
+  "registeredBy": "arn:aws:iam::272717768067:user/ghost",
   "tags": []
 }
