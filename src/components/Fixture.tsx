@@ -24,8 +24,8 @@ const Fixture = ({ title, thumbnail, date }: FixtureProps) => {
       <Image
         src={thumbnail?.secure_url}
         alt={title}
-        width={600}
-        height={338}
+        width={467}
+        height={263}
         className="w-full h-auto cursor-pointer"
       />
       <div className="flex flex-col flex-1 justify-between">
