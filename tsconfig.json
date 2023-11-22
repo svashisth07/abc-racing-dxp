@@ -21,6 +21,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
+      "@blocks": ["./src/components/blocks/index.tsx"],
       "@i18nconfig": ["./i18nconfig.ts"]
     }
   },
