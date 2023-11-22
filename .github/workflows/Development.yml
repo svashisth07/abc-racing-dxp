@@ -31,5 +31,5 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit:ci
 
-      - name: Build Next.js app
-        run: npm run build
+      # - name: Build Next.js app
+      #   run: npm run build

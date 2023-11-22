@@ -29,8 +29,9 @@ const Top5Driver = ({
             <div className="relative w-28 h-28 mb-4 rounded-full">
               <Image
                 src={racer.photo.secure_url}
-                fill
-                alt="Racer"
+                width={160}
+                height={160}
+                alt={racer.name}
                 className="rounded-full"
               />
             </div>
