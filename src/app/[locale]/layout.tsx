@@ -4,7 +4,7 @@ import { hygraphClient } from '@/lib/client';
 import { seoQuery } from '@/lib/queries';
 import { SeoQueryResponse } from '@/types/query';
 import { Locale, locales } from '@i18nconfig';
-// import { unstable_setRequestLocale } from 'next-intl/server';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 
@@ -43,7 +43,7 @@ export default function RootLayout({
   params: { locale: Locale };
 }) {
   // Ensures static rendering at build time.
-  // unstable_setRequestLocale(locale);
+  unstable_setRequestLocale(locale);
 
   const dir = useTextDirection();
   return (
