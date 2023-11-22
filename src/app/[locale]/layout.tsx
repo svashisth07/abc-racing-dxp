@@ -16,6 +16,10 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
+    manifest: '/manifest.json',
+    keywords: ['next13', 'pwa', 'next-pwa'],
+    viewport:
+      'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
   };
 }
 
