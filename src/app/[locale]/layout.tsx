@@ -1,25 +1,33 @@
 import Header from '@/components/Header';
 import useTextDirection from '@/hooks/useTextDirection';
+import { hygraphClient } from '@/lib/client';
+import { seoQuery } from '@/lib/queries';
+import { SeoQueryResponse } from '@/types/query';
 import { Locale, locales } from '@i18nconfig';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+// import { unstable_setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export async function generateMetadata({
-  params: { locale },
+  params: { locale, preview = false },
 }: {
-  params: { locale: Locale };
+  params: { locale: Locale; preview: boolean };
 }) {
-  const t = await getTranslations({ locale, namespace: 'Index.Metadata' });
+  const client = hygraphClient(preview);
+
+  const { page } = await client.request<SeoQueryResponse>(seoQuery, {
+    locale,
+    slug: 'home',
+  });
+
+  const { title, description } = page.seo;
   return {
-    title: t('title'),
-    description: t('description'),
+    title,
+    description,
     manifest: '/manifest.json',
     keywords: ['next13', 'pwa', 'next-pwa'],
-    viewport:
-      'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
   };
 }
 
@@ -35,7 +43,7 @@ export default function RootLayout({
   params: { locale: Locale };
 }) {
   // Ensures static rendering at build time.
-  unstable_setRequestLocale(locale);
+  // unstable_setRequestLocale(locale);
 
   const dir = useTextDirection();
   return (

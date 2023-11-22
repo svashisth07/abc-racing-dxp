@@ -15,13 +15,13 @@ export default function LocaleSwitcher() {
       <select
         value={locale}
         onChange={switchLocale}
-        className="px-2 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="px-2 py-1 border rounded mr-2"
       >
         {locales.map((loc: Locale) => (
           <option
             key={loc}
             value={loc}
-            className="bg-white text-gray-800 hover:bg-gray-200"
+            className="text-white hover:bg-gray-200"
           >
             {localeNames[loc]}
           </option>
