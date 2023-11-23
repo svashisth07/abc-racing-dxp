@@ -1,4 +1,4 @@
-import LocaleSwitcher from '@/components/LocaleSwitcher';
+import LocaleSwitcher from '@/components/client/LocaleSwitcher';
 import { localeNames, locales } from '@i18nconfig';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
