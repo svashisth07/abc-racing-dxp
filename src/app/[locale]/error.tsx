@@ -14,7 +14,7 @@ export default function Error({
 
   return (
     <div>
-      <h2 className="error">Something went wrong! sfsd dfs</h2>
+      <h2 className="text-red-500">Something went wrong!</h2>
     </div>
   );
 }

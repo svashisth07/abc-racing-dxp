@@ -60,4 +60,12 @@ const seoQuery = gql`
   }
 `;
 
-export { pageQuery, seoQuery };
+const getAllPages = gql`
+  query getAllPages {
+    pages {
+      slug
+    }
+  }
+`;
+
+export { getAllPages, pageQuery, seoQuery };
