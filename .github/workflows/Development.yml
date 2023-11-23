@@ -33,3 +33,6 @@ jobs:
 
       # - name: Build Next.js app
       #   run: npm run build
+
+      # - name: Run e2e tests
+      #   run: npm run test:e2e:ci
