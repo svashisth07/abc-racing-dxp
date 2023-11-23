@@ -10,7 +10,6 @@ export default createMiddleware({
   // a prefix (e.g. `/about`)
   defaultLocale: 'en',
   localeDetection: true,
-  localePrefix: 'always',
 });
 
 export const config = {
