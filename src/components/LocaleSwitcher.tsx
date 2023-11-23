@@ -13,6 +13,7 @@ export default function LocaleSwitcher() {
   return (
     <div className="">
       <select
+        aria-label="select language"
         value={locale}
         onChange={switchLocale}
         className="px-2 py-1 border rounded mr-2"

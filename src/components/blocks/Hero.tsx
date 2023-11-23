@@ -17,9 +17,9 @@ const Hero = ({
         loop
         muted
         playsInline
-        className="w-full min-h-[220px] h-auto lg:min-h-[720px] lg:h-[720px] object-cover relative lg:absolute top-0 left-0 bottom-0"
+        className="w-full min-h-[260px] h-auto lg:min-h-[720px] lg:h-[720px] object-cover relative lg:absolute top-0 left-0 bottom-0"
       />
-      <div className="relative h-[250px] lg:h-[720px] flex flex-col item-center justify-center px-4">
+      <div className="relative h-[260px] lg:h-[720px] flex flex-col item-center justify-center px-4">
         <div className="text-center">
           <h1 className="text-white text-3xl lg:text-6xl font-bold mb-4">
             {title}

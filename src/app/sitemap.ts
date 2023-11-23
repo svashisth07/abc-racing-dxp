@@ -16,7 +16,7 @@ export default async function sitemap() {
 
   sitemaps.push({
     url: baseUrl,
-    lastModified: new Date().toISOString(),
+    lastModified: new Date(),
     changeFrequency: 'monthly',
   });
 
@@ -24,8 +24,9 @@ export default async function sitemap() {
     locales.forEach((locale) => {
       sitemaps.push({
         url: `${baseUrl}/${locale}/${page.slug === 'home' ? '' : page.slug}`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: 'daily',
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.5,
       });
     });
   });
