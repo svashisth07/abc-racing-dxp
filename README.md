@@ -23,6 +23,11 @@ The project directory is structured as follows:
   - `lib/`: Contains reusable services such as graphql client
 - `public/`: Contains static assets such as images or fonts
 - `__tests__/`: Contains test files for unit testing
+- `.husky/`: git hooks
+  - `commit-msg` convential commit message check
+  - `pre-commit` - prettier, eslint check before git commit
+  - `pre-push` - unit and e2e test before push
+- `.github/` - github actions for development and production workflow
 - `package.json`: Defines the project dependencies and scripts
 - `README.md`: Provides information about the project
 
