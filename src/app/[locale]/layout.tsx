@@ -4,10 +4,10 @@ import { hygraphClient } from '@/lib/client';
 import { seoQuery } from '@/lib/queries';
 import { SeoQueryResponse } from '@/types/query';
 import { Locale, locales } from '@i18nconfig';
+import { Analytics } from '@vercel/analytics/react';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import '../globals.css';
-
 const inter = Inter({ subsets: ['latin'] });
 
 export async function generateMetadata({
@@ -51,6 +51,7 @@ export default function RootLayout({
       <body className={`${inter.className} relative`}>
         <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );
