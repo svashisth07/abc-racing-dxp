@@ -1,5 +1,6 @@
-import { useLocale, useTranslations } from 'next-intl';
-import Image from 'next/image';
+'use client';
+import { CldImage } from 'next-cloudinary';
+import { useLocale } from 'next-intl';
 
 export type FixtureProps = {
   id: string;
@@ -8,11 +9,11 @@ export type FixtureProps = {
     secure_url: string;
   };
   date: string;
+  dateLabel: string;
 };
 
-const Fixture = ({ title, thumbnail, date }: FixtureProps) => {
+const Fixture = ({ title, thumbnail, date, dateLabel }: FixtureProps) => {
   const locale = useLocale();
-  const t = useTranslations();
   const localizedDate = new Date(date).toLocaleDateString(locale, {
     weekday: 'long',
     year: 'numeric',
@@ -21,7 +22,7 @@ const Fixture = ({ title, thumbnail, date }: FixtureProps) => {
   });
   return (
     <div className="flex flex-col bg-white p-4 rounded-md shadow">
-      <Image
+      <CldImage
         src={thumbnail?.secure_url}
         alt={title}
         width={467}
@@ -32,7 +33,7 @@ const Fixture = ({ title, thumbnail, date }: FixtureProps) => {
       <div className="flex flex-col flex-1 justify-between">
         <h3 className="text-lg font-bold mt-2 cursor-pointer">{title}</h3>
         <p className="text-gray-600">
-          {t('date')}: {localizedDate}
+          {dateLabel}: {localizedDate}
         </p>
       </div>
     </div>

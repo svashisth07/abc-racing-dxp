@@ -8,7 +8,7 @@ import { Locale } from '@i18nconfig';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { cache } from 'react';
 
-export const revalidate = 3600; // revalidate the data at most every hour
+export const revalidate = 60 * 30; // 30 minutes
 
 const getPageData = cache(async (locale: Locale) => {
   const client = hygraphClient(false);

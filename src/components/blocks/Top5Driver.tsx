@@ -1,5 +1,5 @@
-import Image from 'next/image';
-
+'use client';
+import { CldImage } from 'next-cloudinary';
 interface DriverProps {
   id: string;
   name: string;
@@ -27,12 +27,12 @@ const Top5Driver = ({
             className="bg-white p-16 rounded-md shadow flex flex-col items-center cursor-pointer"
           >
             <div className="relative w-28 h-28 mb-4 rounded-full">
-              <Image
+              <CldImage
                 src={racer.photo.secure_url}
+                width={112}
+                height={112}
                 alt={racer.name}
-                layout="fill"
-                objectFit="cover"
-                quality={100}
+                className="rounded-full"
               />
             </div>
             <div className="text-center">
