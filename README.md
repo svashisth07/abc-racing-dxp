@@ -29,7 +29,6 @@ The project directory is structured as follows:
   - `pre-push` - unit and e2e test before push
 - `.github/` - github actions for development and production workflow
 - `package.json`: Defines the project dependencies and scripts
-- `README.md`: Provides information about the project
 
 ## Pre-requisite
 
@@ -40,7 +39,7 @@ The project directory is structured as follows:
 To run this project locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/svashisth07/abc-racing-dxp`
-2. Navigate to the project directory: `cd abc-racing-dxp]`
+2. Navigate to the project directory: `cd abc-racing-dxp`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm run dev`
 5. Open your browser and visit: `http://localhost:3000`
